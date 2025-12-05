@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio</title>
+    <meta name="description" content="Dennis Njogu Muchina - Data Analyst Portfolio. Explore my projects in PostgreSQL, Power BI, Excel, and N8N.">
+    <meta name="keywords" content="Data Analyst, PostgreSQL, Power BI, Excel, N8N, Analytics">
+    <meta property="og:title" content="Dennis Njogu Muchina - Data Analyst Portfolio">
+    <meta property="og:description" content="Transforming complex data into actionable insights">
+    <meta property="og:type" content="website">
+    <title>Data Analyst Portfolio - Dennis Njogu Muchina</title>
     <style>
         * {
             margin: 0;
@@ -145,6 +150,7 @@
             transition: transform 0.3s;
             display: flex;
             align-items: center;
+            gap: 10px;
         }
 
         .logo-img {
@@ -154,10 +160,15 @@
             object-fit: cover;
             border: 2px solid #4a9eff;
             transition: transform 0.3s;
+            background: rgba(74, 158, 255, 0.2);
         }
 
         .logo:hover .logo-img {
             transform: scale(1.1);
+        }
+
+        .logo-text {
+            display: none;
         }
 
         .nav-links {
@@ -203,6 +214,7 @@
             font-size: 80px;
             margin-bottom: 20px;
             background: linear-gradient(45deg, #4a9eff, #64b5f6, #81c784, #4a9eff);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textGlow 3s ease infinite;
@@ -297,11 +309,6 @@
             border-color: #4a9eff;
         }
 
-        .skill-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
         .skill-logo {
             width: 64px;
             height: 64px;
@@ -325,11 +332,11 @@
             text-align: center;
             margin-bottom: 60px;
         }
-
         .bio-header h1 {
             font-size: 60px;
             margin-bottom: 20px;
             background: linear-gradient(45deg, #4a9eff, #81c784);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -381,8 +388,13 @@
             font-size: 60px;
             margin-bottom: 20px;
             background: linear-gradient(45deg, #4a9eff, #7986cb);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .portfolio-header-desc {
+            font-size: 20px;
+            color: #ccc;
         }
 
         .projects-grid {
@@ -507,13 +519,13 @@
             padding: 120px 20px 50px;
             max-width: 900px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .pitch-header h1 {
             font-size: 60px;
             margin-bottom: 40px;
             background: linear-gradient(45deg, #4a9eff, #7986cb);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -613,13 +625,17 @@
 
     <nav>
         <div class="logo" onclick="showPage('home')">
-            <img src="/Dennis photo-83 (2).jpg" alt="Logo" class="logo-img">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo">
+                <circle cx="25" cy="25" r="24" fill="rgba(74, 158, 255, 0.2)" stroke="#4a9eff" stroke-width="2"/>
+                <text x="25" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#4a9eff">DN</text>
+            </svg>
+            <span class="logo-text">Dennis</span>
         </div>
         <div class="nav-links">
-            <a href="#" onclick="showPage('home'); return false;">Home</a>
-            <a href="#" onclick="showPage('bio'); return false;">Bio</a>
-            <a href="#" onclick="showPage('portfolio'); return false;">Portfolio</a>
-            <a href="#" onclick="showPage('pitch'); return false;">Pitch</a>
+            <a href="#" onclick="showPage('home'); return false;" aria-label="Go to Home page">Home</a>
+            <a href="#" onclick="showPage('bio'); return false;" aria-label="Go to Bio page">Bio</a>
+            <a href="#" onclick="showPage('portfolio'); return false;" aria-label="Go to Portfolio page">Portfolio</a>
+            <a href="#" onclick="showPage('pitch'); return false;" aria-label="Go to Pitch page">Pitch</a>
         </div>
     </nav>
 
@@ -632,26 +648,26 @@
                 <p>Transforming complex data into actionable insights through PostgreSQL, Power BI, Excel, and N8N</p>
                 
                 <div class="social-links">
-                    <a href="#" class="social-btn">📊</a>
-                    <a href="#" class="social-btn">💼</a>
-                    <a href="#" class="social-btn">📧</a>
+                    <a href="https://github.com" class="social-btn" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer" title="GitHub">📊</a>
+                    <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
+                    <a href="mailto:your.email@example.com" class="social-btn" aria-label="Send Email" title="Email">📧</a>
                 </div>
 
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo" class="skill-logo" loading="lazy">
                         <div class="skill-name">PostgreSQL</div>
                     </div>
                     <div class="skill-card">
-                        <img src="/icons8-excel-48.png" alt="Excel" class="skill-logo">
+                        <img src="https://img.icons8.com/color/96/000000/microsoft-excel-2019--v1.png" alt="Excel logo" class="skill-logo" loading="lazy">
                         <div class="skill-name">Excel</div>
                     </div>
                     <div class="skill-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="skill-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI logo" class="skill-logo" loading="lazy">
                         <div class="skill-name">Power BI</div>
                     </div>
                     <div class="skill-card">
-                        <img src="/n8n-color.png" alt="N8N" class="skill-logo">
+                        <img src="https://n8n.io/favicon.ico" alt="N8N logo" class="skill-logo" loading="lazy">
                         <div class="skill-name">N8N</div>
                     </div>
                 </div>
@@ -687,7 +703,7 @@
         <div class="portfolio-container">
             <div class="portfolio-header">
                 <h1>My Portfolio</h1>
-                <p style="font-size: 20px; color: #ccc;">Explore my data analytics projects</p>
+                <p class="portfolio-header-desc">Explore my data analytics projects</p>
             </div>
             
             <div class="projects-grid">
@@ -699,7 +715,7 @@
                         <span class="tech-tag">Excel</span>
                         <span class="tech-tag">SQL</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
 
                 <div class="project-card">
@@ -709,7 +725,7 @@
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">SQL</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
 
                 <div class="project-card">
@@ -720,7 +736,7 @@
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">API</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
 
                 <div class="project-card">
@@ -730,14 +746,14 @@
                         <span class="tech-tag">Excel</span>
                         <span class="tech-tag">Power BI</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
             </div>
 
             <div class="github-cta">
                 <h2>Find More on GitHub</h2>
                 <p>Check out my GitHub profile for additional projects, code samples, and contributions</p>
-                <a href="#" class="cta-btn">Visit GitHub Profile</a>
+                <a href="https://github.com" class="cta-btn" target="_blank" rel="noopener noreferrer">Visit GitHub Profile</a>
             </div>
         </div>
     </div>
@@ -852,7 +868,6 @@
             canvas.height = window.innerHeight;
         });
 
-        // Smooth scroll on page load
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });

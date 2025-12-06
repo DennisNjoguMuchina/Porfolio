@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,22 +154,21 @@
             gap: 10px;
         }
 
-        .logo-img {
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-svg {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #4a9eff;
-            transition: transform 0.3s;
-            background: rgba(74, 158, 255, 0.2);
-        }
-
-        .logo:hover .logo-img {
-            transform: scale(1.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .logo-text {
-            display: none;
+            color: #4a9eff;
+            font-size: 24px;
         }
 
         .nav-links {
@@ -536,6 +536,7 @@
             padding: 80px 40px;
             border: 2px dashed rgba(255, 255, 255, 0.2);
             margin-bottom: 40px;
+            text-align: center;
         }
 
         .video-icon {
@@ -608,6 +609,10 @@
             nav { padding: 20px; }
             .nav-links { gap: 15px; }
             .nav-links a { font-size: 16px; }
+            .logo-text { display: none; }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -625,10 +630,7 @@
 
     <nav>
         <div class="logo" onclick="showPage('home')">
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo">
-                <circle cx="25" cy="25" r="24" fill="rgba(74, 158, 255, 0.2)" stroke="#4a9eff" stroke-width="2"/>
-                <text x="25" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#4a9eff">DN</text>
-            </svg>
+            <img src="Dennis photo-83 (2).jpg" alt="Dennis Njogu Muchina" class="logo-svg">
             <span class="logo-text">Dennis</span>
         </div>
         <div class="nav-links">
@@ -648,9 +650,9 @@
                 <p>Transforming complex data into actionable insights through PostgreSQL, Power BI, Excel, and N8N</p>
                 
                 <div class="social-links">
-                    <a href="https://github.com" class="social-btn" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer" title="GitHub">📊</a>
-                    <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
-                    <a href="mailto:your.email@example.com" class="social-btn" aria-label="Send Email" title="Email">📧</a>
+                    <a href="https://github.com/DennisNjoguMuchina" class="social-btn" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer" title="GitHub">📊</a>
+                    <a href="https://www.linkedin.com/in/dennis-njogu-2a48b0254/" class="social-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
+                    <a href="mailto:njogudennis46@gmail.com" class="social-btn" aria-label="Send Email" title="Email">📧</a>
                 </div>
 
                 <div class="skills-grid">
@@ -708,52 +710,52 @@
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Sales Analytics Dashboard</h3>
-                    <p>Interactive Power BI dashboard analyzing sales trends, customer behavior, and revenue patterns to drive strategic business decisions.</p>
+                    <h3>Marketing Campaign Performance Analytics</h3>
+                    <p>Comprehensive SQL project analyzing multi-million dollar marketing campaign performance across multiple channels and customer segments. Demonstrates ability to transform complex marketing data into strategic business recommendations that directly impact ROI.</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Excel Power Query</span>
                         <span class="tech-tag">SQL</span>
                     </div>
-                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    <a href="https://github.com/DennisNjoguMuchina/Marketing-Campaign-Performance-Analytics-SQL-Driven-ROI-Optimization-Across--2.5B-Ad-Spend" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Database Optimization</h3>
-                    <p>Optimized PostgreSQL queries and database structure, reducing report generation time by 60% and improving system performance.</p>
+                    <h3>Supermarket Sales Analytics Dashboard</h3>
+                    <p>Comprehensive Power BI dashboard for a multi-branch supermarket chain operating in Egypt. Provides actionable insights into customer behavior, product performance, and operational metrics across Alexandria, Giza, and Cairo branches.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Power Query</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                    <a href="https://github.com/DennisNjoguMuchina/Supermarket-Sales-Analytics-Dashboard" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Data Analyst Job Market Insights</h3>
+                    <p>Analysis of the data analyst job market using SQL and PostgreSQL. Identifying trends, in-demand skills, and salary insights to help data analysts navigate their career paths more effectively.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Git & GitHub</span>
                     </div>
-                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    <a href="https://github.com/DennisNjoguMuchina/data-analyst-job-market-insights" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Automated Data Pipeline</h3>
-                    <p>Built comprehensive N8N workflow automating data collection, transformation, and loading processes across multiple data sources.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">N8N</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Customer Segmentation</h3>
-                    <p>Performed advanced customer segmentation analysis using clustering techniques to identify key customer groups and behaviors.</p>
+                    <h3>Customer Segmentation Analysis</h3>
+                    <p>Advanced customer segmentation analysis using clustering techniques to identify key customer groups and behaviors. Leveraging Excel and Power BI for comprehensive insights.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Excel</span>
                         <span class="tech-tag">Power BI</span>
                     </div>
-                    <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    <a href="https://github.com/DennisNjoguMuchina" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
             </div>
 
             <div class="github-cta">
                 <h2>Find More on GitHub</h2>
                 <p>Check out my GitHub profile for additional projects, code samples, and contributions</p>
-                <a href="https://github.com" class="cta-btn" target="_blank" rel="noopener noreferrer">Visit GitHub Profile</a>
+                <a href="https://github.com/DennisNjoguMuchina" class="cta-btn" target="_blank" rel="noopener noreferrer">Visit GitHub Profile</a>
             </div>
         </div>
     </div>
@@ -787,88 +789,97 @@
     <script>
         function showPage(pageId) {
             const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-        }
-
-        // Particle animation
-        const canvas = document.getElementById('particles');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const particles = [];
-        const particleCount = 100;
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 3 - 1.5;
-                this.speedY = Math.random() * 3 - 1.5;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
+            pages.forEach(p => p.classList.remove('active'));
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                console.warn('showPage: target not found', pageId);
             }
         }
 
-        function init() {
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
+        // Robust particle animation
+        (function () {
+            const canvas = document.getElementById('particles');
+            if (!canvas) return;
+            const ctx = canvas.getContext && canvas.getContext('2d');
+            if (!ctx) return;
+
+            let particles = [];
+            const particleCount = 100;
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                // rebuild particles on resize
+                particles = [];
+                for (let i = 0; i < particleCount; i++) particles.push(new Particle());
             }
-        }
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                for (let j = i; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 100) {
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 - distance / 500})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 0.8;
+                    this.speedX = Math.random() * 1.6 - 0.8;
+                    this.speedY = Math.random() * 1.6 - 0.8;
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.y > canvas.height) this.y = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                }
+                draw() {
+                    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
                 }
             }
-            requestAnimationFrame(animate);
-        }
 
-        init();
-        animate();
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < particleCount; i++) particles.push(new Particle());
+            }
 
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.update();
+                    p.draw();
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x;
+                        const dy = p.y - p2.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < 110) {
+                            const alpha = Math.max(0, 0.18 - distance / 600);
+                            if (alpha > 0.01) {
+                                ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
 
-        window.addEventListener('load', () => {
+            resizeCanvas();
+            initParticles();
+            animate();
+            window.addEventListener('resize', resizeCanvas, { passive: true });
+        })();
+
+        window.addEventListener('DOMContentLoaded', () => {
             document.body.style.opacity = '1';
         });
     </script>
